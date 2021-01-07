@@ -1,5 +1,5 @@
 body {
-  background: #a6d0e4;
+  background: #fff;
 }
 
 .countdownContainer {
@@ -16,5 +16,5 @@ body {
 
 .info {
   font-size: 80px;
-  color: #d4a5a5;
+  color: #4169e1;
 }
