@@ -1,66 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Reunion Countdown!</title>
 
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <table class="countdownContainer">
-      <tr class="info">
-        <td colspan="4">Azeem and Calysta's Reunion Countdown</td>
-      </tr>
-      <tr class="info">
-        <td id="days">1</td>
-        <td id="hours">0</td>
-        <td id="minutes">42</td>
-        <td id="seconds">30</td>
-      </tr>
-      <tr>
-        <td>Days</td>
-        <td>Hours</td>
-        <td>Minutes</td>
-        <td>Seconds</td>
-      </tr>
-    </table>
-    <script type="text/javascript">
+<head>
+  <meta charset="utf-8">
+  <title>Reunion Countdown!</title>
 
-      function countdown() {
-        var now = new Date();
-        var eventDate = new Date(2021, 0, 7, 22, 58);
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 
-        var currentTime = now.getTime();
-        var eventTime = eventDate.getTime();
+<body>
+  <h1>Azeem & Calysta's Reunion Countdown</h1>
+  <div id="clockdiv">
+    <div>
+      <span class="days"></span>
+      <div class="smalltext">Days</div>
+    </div>
+    <div>
+      <span class="hours"></span>
+      <div class="smalltext">Hours</div>
+    </div>
+    <div>
+      <span class="minutes"></span>
+      <div class="smalltext">Minutes</div>
+    </div>
+    <div>
+      <span class="seconds"></span>
+      <div class="smalltext">Seconds</div>
+    </div>
+  </div>
 
-        var remTime = eventTime - currentTime;
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="timer.js" charset="utf-8"></script>
+  
 
-        var s = Math.floor(remTime / 1000);
-        var m = Math.floor(s / 60);
-        var h = Math.floor(m / 60);
-        var d = Math.floor(h / 24);
+  </script>
 
-        h %= 24;
-        m %= 60;
-        s %= 60;
+</body>
 
-        h = (h < 10) ? "0" + h : h;
-        m = (m < 10) ? "0" + m : m;
-        s = (s < 10) ? "0" + s : s;
-
-        document.getElementById("days").textContent = d;
-        document.getElementById("days").innerText = d;
-
-        document.getElementById("hours").textContent = h;
-        document.getElementById("minutes").textContent = m;
-        document.getElementById("seconds").textContent = s;
-
-        setTimeout(countdown, 1000);
-
-      }
-
-      countdown();
-    </script>
-
-  </body>
 </html>
