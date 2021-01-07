@@ -1,20 +1,49 @@
-body {
-  background: #fff;
-}
-
-.countdownContainer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+body{
   text-align: center;
-  background: #ffecda;
-  border: 1px solid #f9ffea;
-  padding: 10px;
-  box-shadow: 0 0 5px 3px #ffecda;
+  background: #00ECB9;
+  font-family: sans-serif;
+  font-weight: 100;
 }
 
-.info {
-  font-size: 80px;
-  color: #4169e1;
+h1{
+  color: #396;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+#clockdiv{
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+  top: 50%;
+  transform: translateY(70%);
+}
+
+#clockdiv > div{
+  padding: 10px;
+  border-radius: 3px;
+  background: #00BF96;
+  display: inline-block;
+}
+
+#clockdiv div > span{
+  padding: 15px;
+  border-radius: 3px;
+  background: #00816A;
+  display: inline-block;
+}
+
+.smalltext{
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+@media (max-width: 1028px) {
+  #clockdiv {
+    transform: translateY(350%);
+  }
 }
